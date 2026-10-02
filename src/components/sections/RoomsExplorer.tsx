@@ -5,7 +5,7 @@ import { RoomCard } from '@/components/sections/RoomCard';
 import { Icon } from '@/components/icons';
 import { rooms } from '@/data/rooms';
 
-type Category = 'all' | 'sencilla' | 'familiar' | 'vip';
+type Category = 'all' | 'standard' | 'deluxe' | 'double' | 'suite';
 type Beds = 'any' | 'double' | 'single';
 type Baths = 'any' | '1' | '2';
 type Price = 'any' | '60' | '65';
@@ -23,23 +23,33 @@ export function RoomsExplorer() {
     () =>
       rooms.filter((room) => {
         if (category !== 'all' && room.id !== category) return false;
-        if (beds === 'double' && !room.features.includes('2 camas grandes')) {
+
+        if (beds === 'double') {
+          const hasDoubleBed = room.features.some((feature) =>
+            /cama.*doble|doble|2 camas/i.test(feature),
+          );
+          if (!hasDoubleBed) return false;
+        }
+
+        if (beds === 'single') {
+          const hasSingleBed = room.features.some((feature) =>
+            /cama.*individual|sencilla|1 cama/i.test(feature),
+          );
+          if (!hasSingleBed) return false;
+        }
+
+        if (baths === '1' && !room.features.some((feature) => /1 baño|baño privado/i.test(feature))) {
           return false;
         }
-        if (beds === 'single' && !room.features.includes('1 cama sencilla')) {
+
+        if (baths === '2' && !room.features.some((feature) => /2 baños|dos baños/i.test(feature))) {
           return false;
         }
-        if (baths === '1' && !room.features.includes('1 baño privado')) {
-          return false;
-        }
-        if (baths === '2' && !room.features.includes('2 baños privados')) {
-          return false;
-        }
-        // El precio solo filtra categorías con tarifa conocida; las que no
-        // tienen tarifa publicada se mantienen visibles ("Consultar tarifa").
+
         if (price !== 'any' && room.price && room.price.from > Number(price)) {
           return false;
         }
+
         return true;
       }),
     [category, beds, baths, price],
@@ -83,8 +93,8 @@ export function RoomsExplorer() {
               className={selectClass}
             >
               <option value="any">Cualquiera</option>
-              <option value="double">2 camas grandes</option>
-              <option value="single">1 cama sencilla</option>
+              <option value="double">Cama doble / grande</option>
+              <option value="single">Cama individual</option>
             </select>
           </label>
 
@@ -126,7 +136,7 @@ export function RoomsExplorer() {
             <button
               type="button"
               onClick={clearFilters}
-              className="inline-flex items-center gap-1 text-sm font-medium text-ocean-700 underline-offset-4 hover:text-gold-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+              className="inline-flex items-center gap-1 text-sm font-medium text-ocean-700 underline-offset-4 hover:text-gold-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400/40"
             >
               <Icon name="close" className="text-base" />
               Limpiar filtros
@@ -152,7 +162,7 @@ export function RoomsExplorer() {
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-ocean-600 px-5 py-2.5 text-sm font-medium text-cream transition hover:bg-ocean-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-ocean-600 px-5 py-2.5 text-sm font-medium text-cream transition hover:bg-ocean-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400/40"
           >
             Limpiar filtros
           </button>

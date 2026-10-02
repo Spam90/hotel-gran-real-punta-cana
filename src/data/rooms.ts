@@ -71,7 +71,7 @@ export const rooms: Room[] = [
       'Wi‑Fi gratuito',
     ],
     price: null,
-    image: '/images/room-suite.jpg',
+    image: '/images/gallery-room.jpg',
     imageAlt: 'Suite de hotel (imagen provisional)',
   },
 ];

@@ -9,7 +9,7 @@ export function RoomsSection() {
         <SectionHeading
           eyebrow="Alojamiento"
           title="Nuestras habitaciones"
-          description="Tres categorías para adaptarnos al tipo de viaje. Usa los filtros para acotar por categoría, camas, baños o precio de referencia."
+          description="Categorías por confirmar según información pública consultada. Usa los filtros para acotar por categoría, camas, baños o precio de referencia."
         />
 
         <div className="mt-10">
