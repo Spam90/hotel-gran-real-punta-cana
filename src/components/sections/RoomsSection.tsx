@@ -1,3 +1,7 @@
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { RoomsExplorer } from '@/components/sections/RoomsExplorer';
+import { Icon } from '@/components/icons';
+
 export function RoomsSection() {
   return (
     <section id="habitaciones" className="bg-sand-50 py-20 sm:py-24">
