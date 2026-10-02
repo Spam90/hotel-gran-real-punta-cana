@@ -4,7 +4,7 @@ import { Icon } from '@/components/icons';
 import { contact, attractions } from '@/data/hotel';
 
 const embedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-  'Av. Barceló, Bávaro, Punta Cana, La Altagracia, República Dominicana',
+  'Hotel Gran Real Punta Cana, Bávaro, Punta Cana',
 )}&output=embed`;
 
 export function LocationSection() {
@@ -14,7 +14,7 @@ export function LocationSection() {
         <SectionHeading
           eyebrow="Ubicación"
           title="Bien situados en Bávaro"
-          description="El hotel se encuentra en Av. Barceló, en Bávaro, con acceso a algunos de los principales atractivos de Punta Cana."
+          description="La zona de Bávaro es la referencia general. La dirección exacta y los accesos deben confirmarse con el establecimiento."
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
@@ -50,22 +50,28 @@ export function LocationSection() {
               Atractivos cercanos
             </h3>
             <p className="mt-2 text-xs text-ocean-600/70">
-              Distancias y tiempos aproximados recopilados, pendientes de
-              verificación. No son mediciones exactas ni horarios garantizados.
+              No se publican distancias verificadas en este momento. Las distancias
+              y rutas deben confirmarse con el hotel y la ruta elegida.
             </p>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {attractions.map((place) => (
-                <li
-                  key={place.name}
-                  className="flex items-center justify-between gap-3 rounded-lg border border-ocean-50 bg-sand-50 px-4 py-2.5 text-sm"
-                >
-                  <span className="text-ocean-700">{place.name}</span>
-                  <span className="shrink-0 font-medium text-gold-600">
-                    {place.distance}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            {attractions.length > 0 ? (
+              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                {attractions.map((place) => (
+                  <li
+                    key={place.name}
+                    className="flex items-center justify-between gap-3 rounded-lg border border-ocean-50 bg-sand-50 px-4 py-2.5 text-sm"
+                  >
+                    <span className="text-ocean-700">{place.name}</span>
+                    <span className="shrink-0 font-medium text-gold-600">
+                      {place.distance}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 rounded-lg border border-dashed border-ocean-200 bg-white px-4 py-3 text-sm text-ocean-600/80">
+                Distancias por confirmar.
+              </p>
+            )}
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-ocean-100 shadow-soft">

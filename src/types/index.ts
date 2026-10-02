@@ -1,4 +1,4 @@
-export type RoomCategoryId = 'sencilla' | 'familiar' | 'vip';
+export type RoomCategoryId = 'standard' | 'deluxe' | 'double' | 'suite';
 
 /**
  * Rango de precio recopilado. `isReference` indica que es una tarifa
@@ -18,7 +18,7 @@ export interface Room {
   tagline: string;
   description: string;
   /** Nº de habitaciones de esta categoría (dato recopilado, no disponibilidad actual). */
-  units: number;
+  units: number | null;
   features: string[];
   /** Puede ser null cuando no se dispone de tarifa (familiar y VIP). */
   price: PriceReference | null;
@@ -28,15 +28,14 @@ export interface Room {
 
 export type ServiceIconId =
   | 'pool'
-  | 'spa'
-  | 'restaurant'
-  | 'bar'
-  | 'events'
-  | 'roomService'
   | 'reception'
   | 'parking'
   | 'accessible'
-  | 'wifi';
+  | 'wifi'
+  | 'ac'
+  | 'cleaning'
+  | 'nonsmoking'
+  | 'breakfast';
 
 export interface Service {
   id: ServiceIconId;

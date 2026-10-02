@@ -1,87 +1,77 @@
 import type { Room } from '@/types';
 
 /**
- * Categorías de habitación según la información recopilada.
- * La cantidad de habitaciones es un dato histórico recopilado, NO la
- * disponibilidad actual. Las tarifas marcadas como referencia están pendientes
- * de confirmación; las categorías sin tarifa se muestran como "Consultar tarifa".
- *
- * Las fotografías son PROVISIONALES (stock, ver /public/images/CREDITS.txt) y
- * deben sustituirse por material oficial del hotel.
+ * Categorías de habitación consultadas en fuentes públicas.
+ * Los datos de capacidad, disponibilidad y tarifas no se presentan como oficiales
+ * ni vigentes sin confirmación del hotel.
  */
 export const rooms: Room[] = [
   {
-    id: 'sencilla',
-    name: 'Habitación Sencilla',
-    tagline: 'La opción más práctica para tu estancia',
+    id: 'standard',
+    name: 'Habitación Estándar',
+    tagline: 'Categoría base por confirmar',
     description:
-      'Una habitación de uso sencillo, pensada para viajeros que buscan comodidad y todo lo esencial bien resuelto durante su estancia en Bávaro.',
-    units: 55,
+      'Habitación estándar según información pública consultada; la configuración exacta debe confirmarse directamente con el hotel.',
+    units: null,
     features: [
-      '1 cama sencilla',
-      '1 baño privado',
-      'Vestier',
-      'Wi-Fi gratuito',
-      'Televisor de 30 pulgadas',
+      '1 cama grande o cama doble',
+      'Baño privado',
+      'Wi‑Fi gratuito',
       'Aire acondicionado',
-      'Nevera',
-      'Plancha',
-      'Caja fuerte',
     ],
-    price: {
-      from: 57,
-      to: 68,
-      currency: 'USD',
-      isReference: true,
-    },
+    price: null,
     image: '/images/room-sencilla.jpg',
-    imageAlt:
-      'Habitación con una cama, mobiliario de madera clara y luz natural (imagen provisional)',
+    imageAlt: 'Habitación de hotel (imagen provisional)',
   },
   {
-    id: 'familiar',
-    name: 'Habitación Familiar',
-    tagline: 'Más espacio para viajar en familia',
+    id: 'deluxe',
+    name: 'Habitación Deluxe',
+    tagline: 'Categoría por confirmar',
     description:
-      'Categoría amplia con dos camas grandes y dos baños privados, una distribución pensada para compartir la estancia con mayor comodidad.',
-    units: 4,
+      'Habitación deluxe según referencias públicas. La distribución exacta y la disponibilidad deben confirmarse con el establecimiento.',
+    units: null,
     features: [
-      '2 camas grandes',
-      '2 baños privados',
-      'Vestier',
-      'Wi-Fi gratuito',
-      'Televisor de 30 pulgadas',
+      '1 cama doble',
+      'Baño privado',
+      'Wi‑Fi gratuito',
       'Aire acondicionado',
-      'Nevera',
-      'Plancha',
-      'Caja fuerte',
     ],
     price: null,
     image: '/images/room-familiar.jpg',
-    imageAlt:
-      'Habitación con dos camas grandes y ambiente cálido (imagen provisional)',
+    imageAlt: 'Habitación de hotel (imagen provisional)',
   },
   {
-    id: 'vip',
-    name: 'Habitación VIP',
-    tagline: 'Una estancia con un plus de amplitud',
+    id: 'double',
+    name: 'Habitación Doble',
+    tagline: 'Categoría por confirmar',
     description:
-      'Categoría con dos camas grandes y un baño privado, para quienes buscan un alojamiento más espacioso dentro del hotel.',
-    units: 4,
+      'Habitación doble según referencias públicas. La disponibilidad real debe confirmarse con el hotel.',
+    units: null,
     features: [
-      '2 camas grandes',
-      '1 baño privado',
-      'Vestier',
-      'Wi-Fi gratuito',
-      'Televisor de 30 pulgadas',
+      '2 camas individuales',
+      'Baño privado',
+      'Wi‑Fi gratuito',
       'Aire acondicionado',
-      'Nevera',
-      'Plancha',
-      'Caja fuerte',
     ],
     price: null,
     image: '/images/room-vip.jpg',
-    imageAlt:
-      'Habitación elegante con dos camas grandes y tonos neutros (imagen provisional)',
+    imageAlt: 'Habitación de hotel (imagen provisional)',
+  },
+  {
+    id: 'suite',
+    name: 'Suite',
+    tagline: 'Categoría por confirmar',
+    description:
+      'Suite según referencias públicas. Los detalles exactos, incluida la bañera de hidromasaje, deben confirmarse con el hotel.',
+    units: null,
+    features: [
+      '1 cama doble extragrande',
+      'Baño privado',
+      'Bañera de hidromasaje (por confirmar)',
+      'Wi‑Fi gratuito',
+    ],
+    price: null,
+    image: '/images/room-suite.jpg',
+    imageAlt: 'Suite de hotel (imagen provisional)',
   },
 ];

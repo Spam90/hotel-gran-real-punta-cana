@@ -34,6 +34,9 @@ export function RoomCard({ room }: RoomCardProps) {
   const [open, setOpen] = useState(false);
   const { openBooking } = useBooking();
   const previewFeatures = room.features.slice(0, 4);
+  const roomCountLabel = room.units
+    ? `${room.units} habitaciones en el hotel`
+    : 'Cantidad por confirmar';
 
   const photos = [
     {
@@ -43,13 +46,13 @@ export function RoomCard({ room }: RoomCardProps) {
     },
     {
       src: '/images/gallery-interior.jpg',
-      alt: 'Área interior del hotel (imagen de referencia)',
-      caption: 'Zona común del hotel (imagen de referencia)',
+      alt: 'Área interior del hotel (imagen provisional)',
+      caption: 'Zona común del hotel (imagen provisional)',
     },
     {
       src: '/images/gallery-room.jpg',
-      alt: 'Detalle de habitación con luz natural (imagen de referencia)',
-      caption: 'Detalle de habitación (imagen de referencia)',
+      alt: 'Detalle de habitación (imagen provisional)',
+      caption: 'Detalle de habitación (imagen provisional)',
     },
   ];
 
@@ -67,7 +70,7 @@ export function RoomCard({ room }: RoomCardProps) {
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <span className="absolute left-4 top-4 rounded-full bg-ocean-900/70 px-3 py-1 text-xs font-medium text-cream backdrop-blur">
-          {room.units} habitaciones en el hotel
+          {roomCountLabel}
         </span>
       </div>
 
@@ -113,7 +116,7 @@ export function RoomCard({ room }: RoomCardProps) {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex items-center gap-1 text-sm font-medium text-ocean-700 underline-offset-4 hover:text-gold-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+            className="inline-flex items-center gap-1 text-sm font-medium text-ocean-700 underline-offset-4 hover:text-gold-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400/40"
           >
             Ver detalles
             <Icon name="arrowRight" className="text-base" />
@@ -173,8 +176,8 @@ export function RoomCard({ room }: RoomCardProps) {
             </p>
           )}
           <p className="mt-2 text-xs text-ocean-600/80">
-            La cantidad indicada ({room.units} habitaciones) es un dato recopilado y
-            no representa la disponibilidad actual.
+            La cantidad total y la disponibilidad real deben confirmarse con el
+            hotel. Esta información no se presenta como inventario oficial.
           </p>
         </div>
 

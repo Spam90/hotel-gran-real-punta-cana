@@ -1,59 +1,54 @@
 import type { Service } from '@/types';
 
 /**
- * Servicios recopilados. No se detallan horarios, precios, tratamientos ni
- * condiciones específicas porque no están confirmados.
+ * Servicios recopilados. No se detallan horarios, precios ni condiciones específicas
+ * porque no están confirmados por el hotel.
  */
 export const services: Service[] = [
   {
     id: 'pool',
     title: 'Piscina exterior',
     description:
-      'Zona de piscina al aire libre para descansar durante la estancia.',
-  },
-  {
-    id: 'spa',
-    title: 'Spa',
-    description: 'Espacio de bienestar con servicios de spa en la propiedad.',
-  },
-  {
-    id: 'restaurant',
-    title: 'Restaurante',
-    description: 'Restaurante del hotel para las comidas principales del día.',
-  },
-  {
-    id: 'bar',
-    title: 'Bar',
-    description: 'Bar para disfrutar de bebidas y ambiente relajado.',
-  },
-  {
-    id: 'events',
-    title: 'Salón de eventos',
-    description: 'Salón disponible para reuniones y celebraciones.',
-  },
-  {
-    id: 'roomService',
-    title: 'Servicio a la habitación',
-    description: 'Atención en la habitación para mayor comodidad.',
+      'Piscina al aire libre; la disponibilidad y horario deben confirmarse con el hotel.',
   },
   {
     id: 'reception',
     title: 'Recepción 24 horas',
-    description: 'Recepción disponible a cualquier hora del día.',
+    description: 'Recepción disponible a cualquier hora del día; confirmar el servicio exacto con el establecimiento.',
   },
   {
     id: 'parking',
     title: 'Estacionamiento gratuito',
-    description: 'Plaza de aparcamiento sin coste para los huéspedes.',
+    description: 'Estacionamiento por confirmar según la política actual del hotel.',
   },
   {
     id: 'accessible',
-    title: 'Acceso para personas con discapacidad',
-    description: 'Instalaciones con consideraciones de accesibilidad.',
+    title: 'Habitaciones adaptadas / accesibilidad',
+    description: 'Accesibilidad por confirmar con el establecimiento.',
   },
   {
     id: 'wifi',
-    title: 'Wi-Fi en toda la propiedad',
-    description: 'Conexión inalámbrica gratuita en las áreas del hotel.',
+    title: 'Wi‑Fi gratuito',
+    description: 'Conexión inalámbrica gratuita; la cobertura y condiciones deben confirmarse con el hotel.',
+  },
+  {
+    id: 'ac',
+    title: 'Aire acondicionado',
+    description: 'Aire acondicionado en habitaciones; confirmar en la categoría elegida.',
+  },
+  {
+    id: 'cleaning',
+    title: 'Limpieza diaria',
+    description: 'Servicio de limpieza, por confirmar con el establecimiento.',
+  },
+  {
+    id: 'nonsmoking',
+    title: 'Habitaciones para no fumadores',
+    description: 'Disponibilidad por confirmar con el hotel.',
+  },
+  {
+    id: 'breakfast',
+    title: 'Desayuno',
+    description: 'Desayuno continental y americano; confirmar servicio actual y condiciones con el hotel.',
   },
 ];

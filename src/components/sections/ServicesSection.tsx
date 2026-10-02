@@ -4,15 +4,14 @@ import { services } from '@/data/services';
 
 const iconByService = {
   pool: 'pool',
-  spa: 'spa',
-  restaurant: 'restaurant',
-  bar: 'bar',
-  events: 'events',
-  roomService: 'roomService',
   reception: 'reception',
   parking: 'parking',
   accessible: 'accessible',
   wifi: 'wifi',
+  ac: 'ac',
+  cleaning: 'check',
+  nonsmoking: 'check',
+  breakfast: 'restaurant',
 } as const;
 
 export function ServicesSection() {
@@ -22,7 +21,7 @@ export function ServicesSection() {
         <SectionHeading
           eyebrow="Servicios"
           title="Servicios y amenidades"
-          description="Instalaciones y servicios recopilados del hotel. Los horarios, precios y condiciones concretas se confirman directamente con el establecimiento."
+          description="Servicios consultados y pendientes de confirmación directa con el establecimiento. La información oficial debe verificarse con el hotel."
         />
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
