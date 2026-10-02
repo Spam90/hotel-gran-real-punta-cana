@@ -1,0 +1,24 @@
+IMÁGENES PROVISIONALES — Hotel Gran Real Punta Cana (demo)
+
+Todas las fotografías de esta carpeta son material de stock (Unsplash) utilizado
+ÚNICAMENTE como marcador de posición para la demo. NO son fotografías oficiales
+del Hotel Gran Real Punta Cana y NO deben publicarse en un sitio comercial.
+
+Sustituir por material oficial del hotel antes de cualquier uso real.
+
+Archivo                 Origen (Unsplash photo id)
+----------------------  ------------------------------------------
+hero.jpg                photo-1571896349842-33c89424de2d
+room-sencilla.jpg       photo-1566073771259-6a8506099945
+room-familiar.jpg       photo-1590490360182-c33d57733427
+room-vip.jpg            photo-1611892440504-42a792e24d32
+gallery-pool.jpg        photo-1540541338287-41700207dee6
+gallery-reception.jpg   photo-1520250497591-112f2f40a3f4
+gallery-room.jpg        photo-1631049307264-da0ec9d70304
+gallery-interior.jpg    photo-1596394516093-501ba68a0ba6
+gallery-spa.jpg         photo-1544161515-4ab6ce6db874
+gallery-restaurant.jpg  photo-1517248135467-4c7edcad34c4
+gallery-bar.jpg         photo-1559339352-11d035aa65de
+gallery-exterior.jpg    photo-1564501049412-61c2a3083791
+
+Licencia Unsplash: https://unsplash.com/license

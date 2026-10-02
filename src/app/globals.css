@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa la barra fija al saltar a anclas. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-cream text-ocean-800 antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-400/40;
+  }
+}
+
+@layer utilities {
+  /* Respeta la preferencia de movimiento reducido del sistema. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
