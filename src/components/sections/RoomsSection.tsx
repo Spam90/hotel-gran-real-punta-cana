@@ -1,15 +1,11 @@
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { RoomsExplorer } from '@/components/sections/RoomsExplorer';
-import { Icon } from '@/components/icons';
-
 export function RoomsSection() {
   return (
     <section id="habitaciones" className="bg-sand-50 py-20 sm:py-24">
       <div className="container">
         <SectionHeading
           eyebrow="Alojamiento"
-          title="Nuestras habitaciones"
-          description="Categorías por confirmar según información pública consultada. Usa los filtros para acotar por categoría, camas, baños o precio de referencia."
+          title="Habitaciones consultadas"
+          description="Categorías revisadas a partir de referencias públicas. Las condiciones exactas, la disponibilidad y la tarifa deben confirmarse directamente con el hotel."
         />
 
         <div className="mt-10">

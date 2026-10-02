@@ -52,7 +52,7 @@ export function StaySearch() {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="rounded-2xl border border-ocean-100 bg-cream p-6 shadow-card sm:p-8"
+          className="rounded-[28px] border border-ocean-200 bg-white/90 p-6 shadow-card backdrop-blur-sm sm:p-8"
         >
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
             <h2 className="font-display text-2xl text-ocean-800">
@@ -157,7 +157,7 @@ export function StaySearch() {
         </form>
 
         {result ? (
-          <div className="mt-6 rounded-2xl border border-ocean-100 bg-white p-6 shadow-card sm:p-8">
+          <div className="mt-6 rounded-[28px] border border-ocean-100 bg-white p-6 shadow-card sm:p-8">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <h3 className="font-display text-2xl text-ocean-800">
@@ -200,7 +200,7 @@ export function StaySearch() {
                   return (
                     <li
                       key={r.id}
-                      className="flex flex-col rounded-xl border border-ocean-100 p-4"
+                      className="flex flex-col rounded-2xl border border-ocean-100 bg-sand-50 p-4"
                     >
                       <p className="font-display text-lg text-ocean-800">
                         {r.name}

@@ -9,12 +9,14 @@
 
   html {
     scroll-behavior: smooth;
-    /* Compensa la barra fija al saltar a anclas. */
     scroll-padding-top: 5.5rem;
   }
 
   body {
-    @apply bg-cream text-ocean-800 antialiased;
+    @apply bg-[#f8f4ee] text-ocean-800 antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(205, 165, 83, 0.12), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   }
 
   ::selection {
@@ -23,7 +25,6 @@
 }
 
 @layer utilities {
-  /* Respeta la preferencia de movimiento reducido del sistema. */
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

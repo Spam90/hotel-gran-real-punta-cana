@@ -34,14 +34,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         solid
-          ? 'bg-cream/95 shadow-soft backdrop-blur'
-          : 'bg-gradient-to-b from-ocean-900/60 to-transparent'
+          ? 'bg-cream/95 shadow-soft backdrop-blur-md'
+          : 'bg-gradient-to-b from-ocean-900/65 to-transparent'
       }`}
     >
       <nav
-        className="container flex items-center justify-between gap-4 py-4"
+        className="container flex items-center justify-between gap-4 py-3.5"
         aria-label="Navegación principal"
       >
         <a
@@ -70,7 +70,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-4 focus-visible:ring-offset-transparent ${
+                className={`text-sm font-medium tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-4 ${
                   solid
                     ? 'text-ocean-700 hover:text-gold-600'
                     : 'text-cream/90 hover:text-white'

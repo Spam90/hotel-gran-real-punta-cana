@@ -21,14 +21,14 @@ export function ServicesSection() {
         <SectionHeading
           eyebrow="Servicios"
           title="Servicios y amenidades"
-          description="Servicios consultados y pendientes de confirmación directa con el establecimiento. La información oficial debe verificarse con el hotel."
+          description="Servicios revisados y presentados como información por confirmar. La verificación oficial debe hacerse con el establecimiento."
         />
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {services.map((service) => (
             <li
               key={service.id}
-              className="group rounded-2xl border border-ocean-100 bg-white p-6 shadow-soft transition-transform duration-300 hover:-translate-y-1 hover:shadow-card"
+              className="group rounded-[24px] border border-ocean-100 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
             >
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-ocean-50 text-ocean-600 transition-colors group-hover:bg-gold-400/20 group-hover:text-gold-600">
                 <Icon
